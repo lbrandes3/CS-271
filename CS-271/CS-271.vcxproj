@@ -151,7 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ArrayFunctions.c" />
     <ClCompile Include="CS-271.cpp" />
+    <ClCompile Include="Lab4.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArrayFunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
