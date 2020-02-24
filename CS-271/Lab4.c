@@ -2,42 +2,79 @@
 #include "ArrayFunctions.h"
 
 int main(void) {
-    int num[10];
-    fillInteger(num, 10, 1, 10);
-    printIntArray(num, 10);
+    printf("Problem 1\n");
+    int probOne[20];
+    fillInteger(probOne, 20, -20, 20);
+    
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", probOne[i]);
+    }
+    printf("\n");
 
-    char chars[10];
-    fillCharacter(chars, 10, 'a', 'z');
-    printCharArray(chars, 10);
+    for (int i = 10; i < 20; i++) {
+        printf("%d ", probOne[i]);
+    }
+    printf("\n");
+    findConsecutive(probOne, 20);
 
-    float floats[10];
-    fillFloat(floats, 10, 0, 10);
-    printFloatArray(floats, 10);
+    printf("Problem 2\n");
+    char probTwo[50];
+    fillCharacter(probTwo, 50, 'a', 'z');
 
-    int conNum[] = { 1, 2, 5, 4, 6, 5, 6 };
-    findConsecutive(conNum, 7);
+    for (int i = 0; i < 50; i++) {
+        printf("%c ", probTwo[i]);
+    }
+    printf("\n");
+    findTriples(probTwo, 50);
 
-    char tripChar[] = { 'a', 'b', 'c', 'b', 'c', 'd' };
-    findTriples(tripChar, 6);
+    printf("Problem 3\n");
+    char* probThree[20];
+    probThree[0] = "one";
+    probThree[1] = "two";
+    probThree[2] = "three";
+    probThree[3] = "four";
+    probThree[4] = "five";
+    probThree[5] = "six";
+    probThree[6] = "seven";
+    probThree[7] = "eight";
+    probThree[8] = "nine";
+    probThree[9] = "ten";
+    probThree[10] = "eleven";
+    probThree[11] = "twelve";
+    probThree[12] = "thirteen";
+    probThree[13] = "fourteen";
+    probThree[14] = "fifteen";
+    probThree[15] = "sixteen";
+    probThree[16] = "seventeen";
+    probThree[17] = "eighteen";
+    probThree[18] = "nineteen";
+    probThree[19] = "twenty";
 
-    printf("%f\n", floatMean(floats, 10));
-    printf("%f\n", floatMax(floats, 10));
-    printf("%f\n", floatMin(floats, 10));
+    printf("Enter a character: ");
+    char c = getchar();
+    if (c < 'a') {
+        c += ('a' - 'A');
+    }
 
+    while (c < 'a' || c > 'z') {
+        printf("Enter a character: ");
+        c = getchar();
+        printf("\n");
+        if (c < 'a') {
+            c += ('a' - 'A');
+        }
+    }
+    findWords(probThree, 20, c);
 
-    //int num = 0;
-    //double x;
-    //int array[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    //for (num = 0; num < 10; num++) {
-    //    num = num + array[num];
-    //    if (num > 5) {
-    //        b = num;
-    //    }
-    //    else {
-    //        a = num;
-    //    }
-    //    x = num / 10;
-    //}
+    printf("Problem 4\n");
+    float probFour[10];
+    fillFloat(probFour, 10, 1.0, 50.0);
 
-    //printf("%d, %f, %d, %d", num, x, a, b);
+    for (int i = 0; i < 10; i++) {
+        printf("%f  ", probFour[i]);
+    }
+    printf("\n%f\n", floatMean(probFour, 10));
+    printf("%f\n", floatMin(probFour, 10));
+    printf("%f\n", floatMax(probFour, 10));
+
 }

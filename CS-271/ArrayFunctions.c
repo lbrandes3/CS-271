@@ -1,6 +1,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void fillInteger(int a[], int length, int min, int max) {
     int range = max - min + 1;
@@ -34,17 +35,19 @@ void findTriples(char a[], int length) {
     }
 }
 
-//void findWords(char a[], int length, char letter) {
-//    int exists = 0;
-//    for (int i = 0; i < length, i++) {
-//        if (c[i] == letter) {
-//            exists++;
-//        }
-//    }
-//    if (exists) {
-//        for (int i = 0; i < )
-//    }
-//}
+void findWords(char *a[], int length, char letter) {
+    int dne = 1;
+    for (int i = 0; i < length; i++) {
+        char c = strchr(a[i], letter);
+        if (c != NULL) {
+            printf("%s\n", a[i]);
+            dne = 0;
+        }
+    }
+    if (dne) {
+        printf("No elements contain that letter.\n");
+    }
+}
 
 void fillFloat(float a[], int length, float min, float max) {
     float range = max - min;
@@ -87,7 +90,7 @@ void printIntArray(int a[], int length) {
     }
     printf("\n");
 }
-// a comment
+
 void printFloatArray(float a[], int length) {
     for (int i = 0; i < length; i++) {
         printf("%f ", a[i]);

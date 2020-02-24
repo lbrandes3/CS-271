@@ -11,4 +11,5 @@
     void printCharArray(char a[], int length);
     void printIntArray(int a[], int length);
     void printFloatArray(float a[], int length);
+    void findWords(char* a[], int length, char letter);
 #endif
